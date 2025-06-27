@@ -36,9 +36,18 @@ epochs=1000
 for i in range (epochs):
     m,c=gradient_descent(m,c,data_1,L)
 
-print(m,c)
+#This is the final value of m and c after training it on our data 1000 times
+# we can now predict data using this
 
-plt.scatter(data_1.Hours,data_1.Scores)
-plt.plot(list(range(0,10)),[m*x+c for x in range(0,10)],color='red')
-plt.show()
+# print(m,c)
+
+def LRM(x):
+    return (m*x+c)
+
+print(LRM(3))
+
+# plt.scatter(data_1.Hours,data_1.Scores)
+# plt.plot(list(range(0,10)),[m*x+c for x in range(0,10)],color='red')
+# plt.show()
+
 
